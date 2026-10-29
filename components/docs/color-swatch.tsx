@@ -27,7 +27,7 @@ export function PaletteSwatch({ name, step, value }: { name: string; step: strin
       >
         {copied && <Check className={cn("size-4", Number(step) >= 500 ? "text-white" : "text-black")} />}
       </span>
-      <span className="text-caption font-medium">{step}</span>
+      <span className="text-description-regular-2 font-medium">{step}</span>
     </button>
   )
 }

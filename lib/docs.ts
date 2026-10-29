@@ -8,8 +8,35 @@ export type ComponentDoc = {
   examples: { name: string; title: string; description?: string }[]
 }
 
-// 색은 컴포넌트마다 직접 정의해서 추가한다.
-export const components: ComponentDoc[] = []
+// 색은 컴포넌트마다 Figma 스펙에서 정의해서 추가한다.
+export const components: ComponentDoc[] = [
+  {
+    name: "button",
+    title: "Button",
+    description: "Figma Atomic › Button. Type(variant) · Style(intent) · Emphasis · Size 조합과 Hover·Pressed·Disabled 상태를 지원합니다.",
+    usage: {
+      imports: `import { Button } from "@/components/ui/button"`,
+      code: `<Button variant="outline" intent="secondary" emphasis="weak" size="s" leftIcon={<Plus />}>
+  버튼
+</Button>`,
+    },
+    examples: [
+      { name: "button-demo", title: "기본" },
+      {
+        name: "button-variants",
+        title: "Variant · Intent · Emphasis",
+        description: "Figma 의 Type · Style · Emphasis. 마우스를 올리거나 누르면 Hover · Pressed 상태가 됩니다.",
+      },
+      { name: "button-sizes", title: "Size", description: "Xs 28 · S 32 · M 40 · L 48px" },
+      {
+        name: "button-with-icon",
+        title: "아이콘",
+        description: "leftIcon · rightIcon 에 아이콘을 넣으면 크기가 자동으로 맞춰집니다.",
+      },
+      { name: "button-disabled", title: "Disabled" },
+    ],
+  },
+]
 
 export type NavItem = { title: string; href: string }
 
@@ -26,6 +53,7 @@ const nav: { title: string; items: NavItem[] }[] = [
     items: [
       { title: "Colors", href: "/docs/foundations/colors" },
       { title: "Typography", href: "/docs/foundations/typography" },
+      { title: "Radius", href: "/docs/foundations/radius" },
     ],
   },
   {

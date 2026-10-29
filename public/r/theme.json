@@ -5,13 +5,9 @@
   "description": "다글 디자인 토큰 묶음 (colors + typography + radius)",
   "registryDependencies": [
     "@daggle/colors",
-    "@daggle/typography"
+    "@daggle/typography",
+    "@daggle/radius"
   ],
   "files": [],
-  "cssVars": {
-    "light": {
-      "radius": "0.5rem"
-    }
-  },
   "type": "registry:theme"
 }

@@ -35,7 +35,7 @@ export default function ColorsPage() {
         <div className="flex flex-col gap-6">
           {Object.entries(palette).map(([name, scale]) => (
             <div key={name} className="flex flex-col gap-2">
-              <p className="text-body-2 font-semibold capitalize">{name}</p>
+              <p className="text-body-regular-4 font-semibold capitalize">{name}</p>
               <div className="grid grid-cols-6 gap-2 sm:grid-cols-11">
                 {Object.entries(scale as Record<string, string>).map(([step, value]) => (
                   <PaletteSwatch key={step} name={name} step={step} value={value} />
@@ -59,8 +59,8 @@ export default function ColorsPage() {
           }
         >
           <div className="overflow-x-auto rounded-lg border">
-            <table className="text-body-2 w-full">
-              <thead className="bg-muted/50 text-caption text-muted-foreground">
+            <table className="text-body-regular-4 w-full">
+              <thead className="bg-muted/50 text-description-regular-2 text-muted-foreground">
                 <tr className="text-left">
                   <th className="px-4 py-2.5 font-medium">토큰</th>
                   <th className="w-20 px-4 py-2.5 font-medium">색</th>
@@ -79,7 +79,7 @@ export default function ColorsPage() {
                         style={{ background: `var(--${token})` }}
                       />
                     </td>
-                    <td className="text-caption text-muted-foreground px-4 py-2.5 font-mono">{value}</td>
+                    <td className="text-description-regular-2 text-muted-foreground px-4 py-2.5 font-mono">{value}</td>
                   </tr>
                 ))}
               </tbody>

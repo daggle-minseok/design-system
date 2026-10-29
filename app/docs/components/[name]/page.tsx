@@ -94,11 +94,11 @@ export default async function ComponentPage({ params }: Params) {
             {rest.map((example) => (
               <div key={example.name} className="flex flex-col gap-3">
                 <div className="flex flex-col gap-1">
-                  <h3 id={example.name} className="text-title scroll-m-20">
+                  <h3 id={example.name} className="text-body-semibold-2 scroll-m-20">
                     {example.title}
                   </h3>
                   {example.description && (
-                    <p className="text-body-2 text-muted-foreground">{example.description}</p>
+                    <p className="text-body-regular-4 text-muted-foreground">{example.description}</p>
                   )}
                 </div>
                 <ComponentPreview name={example.name} />

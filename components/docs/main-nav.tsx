@@ -17,7 +17,7 @@ export function MainNav() {
           key={group.title}
           href={group.items[0].href}
           className={cn(
-            "text-body-2 transition-colors",
+            "text-body-regular-4 transition-colors",
             group.items.some((item) => item.href === pathname)
               ? "text-foreground font-medium"
               : "text-muted-foreground hover:text-foreground"

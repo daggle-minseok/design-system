@@ -176,16 +176,67 @@ export const fonts = {
   sans: '"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif',
 }
 
-// 텍스트 스타일: 클래스 하나(`text-heading-1`)로 크기·행간·굵기·자간 적용
+// 텍스트 스타일 — Figma › Typography (node 356:1817). 클래스 하나(`text-body-regular-2`)로 크기·행간·굵기·자간 적용
+// 이름: 굵기가 한 가지인 분류는 번호만(display-1), Body·Label·Description 은 굵기 포함(body-regular-2)
 export const textStyles = {
-  "display-1": { size: "2.5rem", lineHeight: "3.25rem", weight: "700", letterSpacing: "-0.025em" },
-  "heading-1": { size: "2rem", lineHeight: "2.75rem", weight: "700", letterSpacing: "-0.02em" },
-  "heading-2": { size: "1.5rem", lineHeight: "2.125rem", weight: "700", letterSpacing: "-0.02em" },
-  "heading-3": { size: "1.25rem", lineHeight: "1.75rem", weight: "600", letterSpacing: "-0.01em" },
-  title: { size: "1.125rem", lineHeight: "1.625rem", weight: "600", letterSpacing: "-0.01em" },
-  "body-1": { size: "1rem", lineHeight: "1.5rem", weight: "400", letterSpacing: "0" },
-  "body-2": { size: "0.875rem", lineHeight: "1.25rem", weight: "400", letterSpacing: "0" },
-  caption: { size: "0.75rem", lineHeight: "1rem", weight: "400", letterSpacing: "0" },
+  "display-1": { figma: "Display (Bold)/1", size: "2rem", lineHeight: "3.25rem", weight: "700", letterSpacing: "-0.4px" },
+  "display-2": { figma: "Display (Bold)/2", size: "1.75rem", lineHeight: "3rem", weight: "700", letterSpacing: "-0.4px" },
+  "display-3": { figma: "Display (Bold)/3", size: "1.5rem", lineHeight: "2.75rem", weight: "700", letterSpacing: "-0.4px" },
+  "display-4": { figma: "Display (Bold)/4", size: "1.25rem", lineHeight: "2.5rem", weight: "700", letterSpacing: "-0.4px" },
+  "heading-1": { figma: "Heading (Semibold)/1", size: "2rem", lineHeight: "3rem", weight: "600", letterSpacing: "-0.35px" },
+  "heading-2": { figma: "Heading (Semibold)/2", size: "1.75rem", lineHeight: "2.75rem", weight: "600", letterSpacing: "-0.35px" },
+  "heading-3": { figma: "Heading (Semibold)/3", size: "1.5rem", lineHeight: "2.5rem", weight: "600", letterSpacing: "-0.35px" },
+  "heading-4": { figma: "Heading (Semibold)/4", size: "1.25rem", lineHeight: "2.25rem", weight: "600", letterSpacing: "-0.35px" },
+  "title-1": { figma: "Title (Bold)/1", size: "1.125rem", lineHeight: "2.375rem", weight: "700", letterSpacing: "0" },
+  "title-2": { figma: "Title (Bold)/2", size: "1rem", lineHeight: "2.125rem", weight: "700", letterSpacing: "0" },
+  "title-3": { figma: "Title (Bold)/3", size: "0.9375rem", lineHeight: "2rem", weight: "700", letterSpacing: "0" },
+  "title-4": { figma: "Title (Bold)/4", size: "0.875rem", lineHeight: "1.875rem", weight: "700", letterSpacing: "0" },
+  "title-5": { figma: "Title (Bold)/5", size: "0.8125rem", lineHeight: "1.75rem", weight: "700", letterSpacing: "0" },
+  "title-6": { figma: "Title (Bold)/6", size: "0.75rem", lineHeight: "1.625rem", weight: "700", letterSpacing: "0" },
+  "subtitle-1": { figma: "Subtitle (Semibold)/1", size: "1.125rem", lineHeight: "2.375rem", weight: "600", letterSpacing: "0" },
+  "subtitle-2": { figma: "Subtitle (Semibold)/2", size: "1rem", lineHeight: "2.125rem", weight: "600", letterSpacing: "0" },
+  "subtitle-3": { figma: "Subtitle (Semibold)/3", size: "0.9375rem", lineHeight: "2rem", weight: "600", letterSpacing: "0" },
+  "subtitle-4": { figma: "Subtitle (Semibold)/4", size: "0.875rem", lineHeight: "1.875rem", weight: "600", letterSpacing: "0" },
+  "subtitle-5": { figma: "Subtitle (Semibold)/5", size: "0.8125rem", lineHeight: "1.75rem", weight: "600", letterSpacing: "0" },
+  "subtitle-6": { figma: "Subtitle (Semibold)/6", size: "0.75rem", lineHeight: "1.625rem", weight: "600", letterSpacing: "0" },
+  "body-semibold-1": { figma: "Body (Semibold)/1", size: "1.125rem", lineHeight: "1.75rem", weight: "600", letterSpacing: "-0.3px" },
+  "body-semibold-2": { figma: "Body (Semibold)/2", size: "1rem", lineHeight: "1.5rem", weight: "600", letterSpacing: "-0.3px" },
+  "body-semibold-3": { figma: "Body (Semibold)/3", size: "0.9375rem", lineHeight: "1.375rem", weight: "600", letterSpacing: "-0.25px" },
+  "body-semibold-4": { figma: "Body (Semibold)/4", size: "0.875rem", lineHeight: "1.25rem", weight: "600", letterSpacing: "-0.2px" },
+  "body-semibold-5": { figma: "Body (Semibold)/5", size: "0.8125rem", lineHeight: "1.125rem", weight: "600", letterSpacing: "-0.2px" },
+  "body-semibold-6": { figma: "Body (Semibold)/6", size: "0.75rem", lineHeight: "1rem", weight: "600", letterSpacing: "-0.2px" },
+  "body-regular-1": { figma: "Body (Regular)/1", size: "1.125rem", lineHeight: "1.75rem", weight: "400", letterSpacing: "-0.3px" },
+  "body-regular-2": { figma: "Body (Regular)/2", size: "1rem", lineHeight: "1.5rem", weight: "400", letterSpacing: "-0.3px" },
+  "body-regular-3": { figma: "Body (Regular)/3", size: "0.9375rem", lineHeight: "1.375rem", weight: "400", letterSpacing: "-0.25px" },
+  "body-regular-4": { figma: "Body (Regular)/4", size: "0.875rem", lineHeight: "1.25rem", weight: "400", letterSpacing: "-0.2px" },
+  "body-regular-5": { figma: "Body (Regular)/5", size: "0.8125rem", lineHeight: "1.125rem", weight: "400", letterSpacing: "-0.2px" },
+  "body-regular-6": { figma: "Body (Regular)/6", size: "0.75rem", lineHeight: "1rem", weight: "400", letterSpacing: "-0.2px" },
+  "label-semibold-1": { figma: "Label (Semibold)/1", size: "1.125rem", lineHeight: "2.375rem", weight: "600", letterSpacing: "0" },
+  "label-semibold-2": { figma: "Label (Semibold)/2", size: "1rem", lineHeight: "2.125rem", weight: "600", letterSpacing: "0" },
+  "label-semibold-3": { figma: "Label (Semibold)/3", size: "0.9375rem", lineHeight: "2rem", weight: "600", letterSpacing: "0" },
+  "label-semibold-4": { figma: "Label (Semibold)/4", size: "0.875rem", lineHeight: "1.875rem", weight: "600", letterSpacing: "0" },
+  "label-semibold-5": { figma: "Label (Semibold)/5", size: "0.8125rem", lineHeight: "1.75rem", weight: "600", letterSpacing: "0" },
+  "label-semibold-6": { figma: "Label (Semibold)/6", size: "0.75rem", lineHeight: "1.625rem", weight: "600", letterSpacing: "0" },
+  "label-regular-1": { figma: "Label (Regular)/1", size: "1.125rem", lineHeight: "2.375rem", weight: "400", letterSpacing: "0" },
+  "label-regular-2": { figma: "Label (Regular)/2", size: "1rem", lineHeight: "2.125rem", weight: "400", letterSpacing: "0" },
+  "label-regular-3": { figma: "Label (Regular)/3", size: "0.9375rem", lineHeight: "2rem", weight: "400", letterSpacing: "0" },
+  "label-regular-4": { figma: "Label (Regular)/4", size: "0.875rem", lineHeight: "1.875rem", weight: "400", letterSpacing: "0" },
+  "label-regular-5": { figma: "Label (Regular)/5", size: "0.8125rem", lineHeight: "1.75rem", weight: "400", letterSpacing: "0" },
+  "label-regular-6": { figma: "Label (Regular)/6", size: "0.75rem", lineHeight: "1.625rem", weight: "400", letterSpacing: "0" },
+  "description-semibold-1": { figma: "Description (Semibold)/1", size: "0.8125rem", lineHeight: "1.125rem", weight: "600", letterSpacing: "-0.2px" },
+  "description-regular-1": { figma: "Description (Regular)/1", size: "0.8125rem", lineHeight: "1.125rem", weight: "400", letterSpacing: "-0.2px" },
+  "description-regular-2": { figma: "Description (Regular)/2", size: "0.75rem", lineHeight: "1rem", weight: "400", letterSpacing: "-0.2px" },
+  "caption-1": { figma: "Caption (Regular)/1", size: "0.8125rem", lineHeight: "1rem", weight: "400", letterSpacing: "-0.2px" },
 }
 
-export const radius = "0.5rem"
+// 모서리 — Figma › Radius (node 1004:62686). 클래스는 값 기준 `rounded-4`
+// (단계 이름 xs·s·m·l 은 Tailwind 의 rounded-s(시작쪽)·rounded-l(왼쪽)과 겹쳐 쓰지 않음)
+// None 0 · XS 4 · S 8 · M 12 · L 16 · Full 999
+export const radius = {
+  0: "0px",
+  4: "4px",
+  8: "8px",
+  12: "12px",
+  16: "16px",
+  full: "999px",
+}

@@ -27,7 +27,7 @@ export function InstallCommand({ args }: { args: string }) {
             type="button"
             onClick={() => setManager(m)}
             className={cn(
-              "text-caption -mb-px border-b-2 px-2 py-2.5 font-medium transition-colors",
+              "text-description-regular-2 -mb-px border-b-2 px-2 py-2.5 font-medium transition-colors",
               m === manager
                 ? "border-foreground text-foreground"
                 : "text-muted-foreground hover:text-foreground border-transparent"

@@ -35,6 +35,7 @@
 }
 
 :root {
+  --radius: 0.5rem;
   --background: var(--gray-0);
   --foreground: var(--gray-900);
   --card: var(--gray-0);

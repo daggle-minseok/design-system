@@ -54,8 +54,8 @@ export default function InstallationPage() {
           code={`export default function Page() {
   return (
     <section className="rounded-lg border border-gray-300 bg-gray-50 p-6">
-      <h1 className="text-heading-2 text-text-strong">프로젝트</h1>
-      <p className="text-body-2 text-text-tertiary">설명 텍스트</p>
+      <h1 className="text-heading-3 text-text-strong">프로젝트</h1>
+      <p className="text-body-regular-4 text-text-tertiary">설명 텍스트</p>
     </section>
   )
 }`}

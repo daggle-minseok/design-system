@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radius",
+  "title": "Radius",
+  "description": "다글 모서리 토큰 (Figma Radius: rounded-0 · 4 · 8 · 12 · 16 · full)",
+  "files": [],
+  "cssVars": {
+    "theme": {
+      "radius-0": "0px",
+      "radius-4": "4px",
+      "radius-8": "8px",
+      "radius-12": "12px",
+      "radius-16": "16px",
+      "radius-full": "999px"
+    }
+  },
+  "type": "registry:theme"
+}
