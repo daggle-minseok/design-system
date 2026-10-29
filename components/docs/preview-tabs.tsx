@@ -2,7 +2,7 @@
 
 import * as React from "react"
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/daggle/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const lineTrigger =
   "text-muted-foreground data-[state=active]:text-foreground data-[state=active]:border-b-foreground dark:data-[state=active]:border-b-foreground h-10 flex-none rounded-none border-0 border-b-2 border-b-transparent bg-transparent px-1 data-[state=active]:bg-transparent data-[state=active]:shadow-none dark:data-[state=active]:bg-transparent"

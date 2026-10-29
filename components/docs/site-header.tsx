@@ -1,5 +1,5 @@
 import { GITHUB_URL } from "@/lib/docs"
-import { Button } from "@/registry/daggle/ui/button"
+import { Button } from "@/components/ui/button"
 import { GithubIcon } from "@/components/docs/github-icon"
 import { Logo } from "@/components/docs/logo"
 import { MainNav } from "@/components/docs/main-nav"

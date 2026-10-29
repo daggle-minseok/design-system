@@ -1,8 +1,7 @@
 import Link from "next/link"
-import { Blocks, Palette, Type } from "lucide-react"
+import { Palette, Type } from "lucide-react"
 
-import { components } from "@/lib/docs"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/registry/daggle/ui/card"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { DocPage, DocSection } from "@/components/docs/doc-page"
 
 export const metadata = { title: "소개" }
@@ -12,19 +11,13 @@ const cards = [
     href: "/docs/foundations/colors",
     icon: Palette,
     title: "Colors",
-    description: "brand · gray 팔레트와 라이트/다크 의미 토큰",
+    description: "Figma Base Color 팔레트와 Semantic 토큰",
   },
   {
     href: "/docs/foundations/typography",
     icon: Type,
     title: "Typography",
     description: "Pretendard 와 8단계 텍스트 스타일",
-  },
-  {
-    href: "/docs/components/button",
-    icon: Blocks,
-    title: "컴포넌트",
-    description: `${components.length}개 컴포넌트와 사용 예시`,
   },
 ]
 
@@ -36,7 +29,7 @@ export default function IntroductionPage() {
       title="소개"
       description="다글 디자인 시스템은 프로젝트에 소스 코드를 그대로 복사해 쓰는 컴포넌트 모음입니다."
     >
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2">
         {cards.map(({ href, icon: Icon, title, description }) => (
           <Link key={href} href={href} className="group">
             <Card className="group-hover:border-primary/40 h-full gap-3 transition-colors">
@@ -69,12 +62,16 @@ export default function IntroductionPage() {
       <DocSection id="principles" title="사용 원칙">
         <ul className="text-body-2 text-foreground/90 ml-5 list-disc space-y-1.5">
           <li>
-            색은 의미 토큰(<code className="bg-muted rounded px-1 font-mono text-[13px]">bg-primary</code>,{" "}
-            <code className="bg-muted rounded px-1 font-mono text-[13px]">text-success</code>)을 씁니다. 팔레트는
-            의미 토큰을 정의할 때만 씁니다.
+            글자색은 Figma 텍스트 토큰(<code className="bg-muted rounded px-1 font-mono text-[13px]">text-text-strong</code>,{" "}
+            <code className="bg-muted rounded px-1 font-mono text-[13px]">text-text-tertiary</code>)을 씁니다.
           </li>
           <li>
-            글자는 텍스트 스타일(<code className="bg-muted rounded px-1 font-mono text-[13px]">text-body-2</code>)
+            배경·테두리·버튼은 Semantic 토큰(<code className="bg-muted rounded px-1 font-mono text-[13px]">bg-bg-canvas</code>,{" "}
+            <code className="bg-muted rounded px-1 font-mono text-[13px]">border-border-strong</code>,{" "}
+            <code className="bg-muted rounded px-1 font-mono text-[13px]">bg-interactive-primary-default</code>)을 씁니다.
+          </li>
+          <li>
+            글자 크기는 텍스트 스타일(<code className="bg-muted rounded px-1 font-mono text-[13px]">text-body-2</code>)
             하나로 크기·행간·굵기를 함께 지정합니다.
           </li>
           <li>토큰 값을 바꾸려면 레지스트리의 tokens/tokens.mjs 를 고친 뒤 theme 을 다시 설치합니다.</li>

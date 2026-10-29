@@ -15,18 +15,17 @@
 ```
 
 ```bash
-npx shadcn@latest add @daggle/theme          # 토큰만 (colors + typography + radius)
-npx shadcn@latest add @daggle/button @daggle/card
+npx shadcn@latest add @daggle/theme          # colors + typography + radius
 ```
-
-컴포넌트는 `@daggle/theme`·`@daggle/utils`를 의존성으로 함께 설치한다.
 
 | 항목 | 내용 |
 |---|---|
-| `colors` | `bg-brand-500`, `text-gray-700` 팔레트 + `bg-primary`, `text-success` 의미 토큰 (라이트/다크) |
+| `colors` | Figma Base Color 팔레트(`bg-gray-500`) + Semantic 토큰 — text·bg·border·icon·interactive·status (`text-text-strong`, `bg-bg-canvas`, `border-border-strong`, `bg-interactive-primary-default`) |
 | `typography` | Pretendard + `text-display-1` `text-heading-1~3` `text-title` `text-body-1~2` `text-caption` |
 | `theme` | colors + typography + radius 묶음 |
-| ui | button, alert, badge, input, textarea, label, checkbox, card |
+| `utils` | `cn()` — 컴포넌트용 |
+
+컴포넌트는 아직 없다. shadcn 표준 의미 토큰(`primary`, `border` 등)은 쓰지 않고, 컴포넌트마다 색을 Figma 팔레트·텍스트 토큰으로 직접 정의해서 추가한다.
 
 ## 토큰 수정하기
 
@@ -41,7 +40,7 @@ npx shadcn@latest add @daggle/button @daggle/card
 
 ## 컴포넌트 추가하기
 
-1. `registry/daggle/ui/<name>.tsx` 작성 — 색은 의미 토큰(`bg-primary`), 글자는 텍스트 스타일(`text-body-2`)을 쓴다. import 는 `@/lib/utils` 처럼 기본 alias (설치 시 사용처 alias 로 바뀜)
+1. `registry/daggle/ui/<name>.tsx` 작성 — 색은 Figma Semantic 토큰(`bg-interactive-primary-default`, `border-border-strong`, `text-text-strong`), 글자는 텍스트 스타일(`text-body-2`)을 쓴다. import 는 `@/lib/utils` 처럼 기본 alias (설치 시 사용처 alias 로 바뀜)
 2. `registry.json` 의 `items` 에 추가 (`registryDependencies: ["@daggle/utils", "@daggle/theme"]`)
 3. 문서 페이지: `examples/<name>-demo.tsx` 등 예시 파일 작성 → `examples/index.ts` 에 등록 → `lib/docs.ts` 의 `components` 에 설명·사용법·예시 목록 추가 (사이드바와 `/docs/components/<name>` 페이지가 자동 생성)
 4. `pnpm registry:build` → `public/r/<name>.json` 생성, **`public/r` 까지 커밋** (raw URL 로 서빙하므로)
@@ -51,7 +50,7 @@ npx shadcn@latest add @daggle/button @daggle/card
 | 경로 | 내용 |
 |---|---|
 | `app/docs/**` | 소개 · 설치 · Foundations(Colors/Typography) · 컴포넌트 페이지 |
-| `components/docs/` | 문서 사이트 전용 UI (헤더, 사이드바, 코드 블록, 설치 명령). 레지스트리에 포함되지 않음 |
+| `components/docs/`, `components/ui/` | 문서 사이트 전용 UI (헤더, 사이드바, 코드 블록, 버튼·탭 등). 레지스트리에 포함되지 않음. 이 UI 의 색(`bg-background`, `border` 등)은 `app/globals.css` 에만 정의 |
 | `examples/` | 컴포넌트 예시. Preview 탭에 렌더링되고 같은 파일 소스가 Code 탭에 표시됨 |
 | `lib/docs.ts` | 사이드바 메뉴와 컴포넌트 문서 내용 |
 

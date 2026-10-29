@@ -2,7 +2,7 @@ import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import { docsNav } from "@/lib/docs"
-import { Button } from "@/registry/daggle/ui/button"
+import { Button } from "@/components/ui/button"
 
 export function Pager({ href }: { href: string }) {
   const flat = docsNav.flatMap((group) => group.items)

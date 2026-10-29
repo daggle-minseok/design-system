@@ -11,8 +11,10 @@ const paletteVars = Object.fromEntries(
   )
 )
 
+const semanticVars = Object.assign({}, ...Object.values(semantic))
+
 const colorThemeMap = Object.fromEntries(
-  [...Object.keys(paletteVars), ...Object.keys(semantic.light)].map((name) => [
+  [...Object.keys(paletteVars), ...Object.keys(semanticVars)].map((name) => [
     `color-${name}`,
     `var(--${name})`,
   ])
@@ -35,12 +37,11 @@ const items = {
     name: "colors",
     type: "registry:theme",
     title: "Colors",
-    description: "다글 컬러 토큰 (brand/gray 팔레트 + 의미 토큰, 라이트/다크)",
+    description: "다글 컬러 토큰 (Figma Base Color 팔레트 + Semantic text·bg·border·icon·interactive·status)",
     files: [],
     cssVars: {
       theme: colorThemeMap,
-      light: { ...paletteVars, ...semantic.light },
-      dark: semantic.dark,
+      light: { ...paletteVars, ...semanticVars },
     },
   },
   typography: {
@@ -84,8 +85,7 @@ writeFileSync(
     "/* scripts/build-tokens.mjs 가 생성. 직접 수정하지 말고 tokens/tokens.mjs 를 고친다. */\n",
     `@import "${FONT_IMPORT}";\n`,
     block("@theme inline", { ...colorThemeMap, ...typographyTheme }),
-    block(":root", { radius, ...paletteVars, ...semantic.light }),
-    block(".dark", semantic.dark),
+    block(":root", { radius, ...paletteVars, ...semanticVars }),
   ].join("\n")
 )
 

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Menu, X } from "lucide-react"
 
-import { Button } from "@/registry/daggle/ui/button"
+import { Button } from "@/components/ui/button"
 import { SidebarNav } from "@/components/docs/sidebar-nav"
 
 export function MobileNav() {

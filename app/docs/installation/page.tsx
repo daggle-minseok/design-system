@@ -22,7 +22,7 @@ export default function InstallationPage() {
         { id: "init", title: "shadcn 초기화" },
         { id: "registry", title: "레지스트리 등록" },
         { id: "theme", title: "토큰 설치" },
-        { id: "components", title: "컴포넌트 설치" },
+        { id: "usage", title: "사용" },
       ]}
     >
       <DocSection
@@ -44,18 +44,20 @@ export default function InstallationPage() {
       <DocSection
         id="theme"
         title="3. 토큰 설치"
-        description="색·타이포·radius 토큰을 globals.css 에 넣습니다. 컴포넌트를 설치하면 자동으로 함께 설치되므로 생략해도 됩니다."
+        description="색·타이포·radius 토큰을 globals.css 에 넣습니다."
       >
         <InstallCommand args="add @daggle/theme" />
       </DocSection>
 
-      <DocSection id="components" title="4. 컴포넌트 설치" description="필요한 컴포넌트만 골라서 설치합니다.">
-        <InstallCommand args="add @daggle/button @daggle/card" />
+      <DocSection id="usage" title="4. 사용" description="설치한 토큰은 Tailwind 클래스로 바로 씁니다.">
         <CodeBlock
-          code={`import { Button } from "@/components/ui/button"
-
-export default function Page() {
-  return <Button>시작하기</Button>
+          code={`export default function Page() {
+  return (
+    <section className="rounded-lg border border-gray-300 bg-gray-50 p-6">
+      <h1 className="text-heading-2 text-text-strong">프로젝트</h1>
+      <p className="text-body-2 text-text-tertiary">설명 텍스트</p>
+    </section>
+  )
 }`}
         />
       </DocSection>
