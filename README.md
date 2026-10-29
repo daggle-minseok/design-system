@@ -43,8 +43,19 @@ npx shadcn@latest add @daggle/button @daggle/card
 
 1. `registry/daggle/ui/<name>.tsx` 작성 — 색은 의미 토큰(`bg-primary`), 글자는 텍스트 스타일(`text-body-2`)을 쓴다. import 는 `@/lib/utils` 처럼 기본 alias (설치 시 사용처 alias 로 바뀜)
 2. `registry.json` 의 `items` 에 추가 (`registryDependencies: ["@daggle/utils", "@daggle/theme"]`)
-3. `app/page.tsx` 에 미리보기 추가
+3. 문서 페이지: `examples/<name>-demo.tsx` 등 예시 파일 작성 → `examples/index.ts` 에 등록 → `lib/docs.ts` 의 `components` 에 설명·사용법·예시 목록 추가 (사이드바와 `/docs/components/<name>` 페이지가 자동 생성)
 4. `pnpm registry:build` → `public/r/<name>.json` 생성, **`public/r` 까지 커밋** (raw URL 로 서빙하므로)
+
+## 문서 사이트 구조
+
+| 경로 | 내용 |
+|---|---|
+| `app/docs/**` | 소개 · 설치 · Foundations(Colors/Typography) · 컴포넌트 페이지 |
+| `components/docs/` | 문서 사이트 전용 UI (헤더, 사이드바, 코드 블록, 설치 명령). 레지스트리에 포함되지 않음 |
+| `examples/` | 컴포넌트 예시. Preview 탭에 렌더링되고 같은 파일 소스가 Code 탭에 표시됨 |
+| `lib/docs.ts` | 사이드바 메뉴와 컴포넌트 문서 내용 |
+
+dev 서버가 떠 있는 동안 `next build` 를 돌리면 `.next` 를 덮어써 dev 서버가 500 을 낸다. 검증은 `pnpm exec tsc --noEmit` / `pnpm lint` 로 한다.
 
 ## 주의
 

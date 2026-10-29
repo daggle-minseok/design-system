@@ -352,6 +352,25 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "탭 전환",
+      "dependencies": [
+        "@radix-ui/react-tabs"
+      ],
+      "registryDependencies": [
+        "@daggle/utils",
+        "@daggle/theme"
+      ],
+      "files": [
+        {
+          "path": "registry/daggle/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

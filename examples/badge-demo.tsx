@@ -1,0 +1,11 @@
+import { Badge } from "@/registry/daggle/ui/badge"
+
+export default function BadgeDemo() {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <Badge>Default</Badge>
+      <Badge variant="secondary">Secondary</Badge>
+      <Badge variant="outline">Outline</Badge>
+    </div>
+  )
+}
