@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme",
+  "title": "Daggle Theme",
+  "description": "다글 디자인 토큰 묶음 (colors + typography + radius)",
+  "registryDependencies": [
+    "@daggle/colors",
+    "@daggle/typography"
+  ],
+  "files": [],
+  "cssVars": {
+    "light": {
+      "radius": "0.5rem"
+    }
+  },
+  "type": "registry:theme"
+}
